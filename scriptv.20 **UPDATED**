@@ -1,0 +1,86 @@
+import os
+import sys
+import platform
+import webbrowser
+import socket
+import datetime
+
+fo = open("entoles.txt", "r")
+for x in fo:
+    print x
+fo.close()
+
+def  yaee():
+    print " --TIME GIA NA DEIS THN WRA"
+    print " --OS GIA NA DEIS TO LEITOYRGIKO SU SISTIMA "
+    print " --CMD  GIA NA ANOIKSEIS ENA NEO CMD"
+    print " --LINK  gia na  anoikseis ena Link poy thes"
+    print " --NOTEPAD gia na anoikseis shmeiomatario"
+    print " --SITE GIA NA PAREIS THN IP APO ENA SITE"
+    
+
+def kalosirthes():
+    print "                         CODED BY SCRIPTFORGAMES"
+    print " elpizw na sou aresei to sigkerimeno "
+
+
+print kalosirthes()
+print yaee()
+
+entolh  = raw_input("grapse  edw mia entolh: ")
+
+def  cmd():
+    os.popen("start cmd")
+
+
+def notepad():
+    os.popen("start notepad")
+
+
+def wra():
+    print datetime.date.today()
+    
+
+def wsdbbrowser():
+    site = raw_input("bale edw to site: ")
+    link = site
+    print  webbrowser.open_new_tab(link)
+
+
+def  site():
+    snitsel = raw_input("bale to site gia na pareis ip: ")
+    asl =  snitsel
+    print socket.gethostbyname(asl)
+
+def litourgiko():
+    print platform.system()
+
+
+if entolh == "--SITE":
+    print site()
+
+
+if entolh == "--LINK":
+    print wsdbbrowser()
+
+
+if  entolh == "--OS":
+    print litourgiko()
+    print platform.system()
+    print platform.machine()
+
+
+
+if entolh == "--NOTEPAD":
+    print notepad()
+
+
+if entolh == "--CMD":
+    print cmd()
+
+
+if entolh == "--TIME":
+    print wra()
+
+
+
